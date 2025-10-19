@@ -15,3 +15,9 @@
 console.log("1");
 console.log("2");
 console.log("3");
+```js
+출력 결과
+1
+2
+3
+즉, “한 줄씩 차례로 처리하는” 방식입니다.
