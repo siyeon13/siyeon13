@@ -83,7 +83,6 @@ getData(() => {
 콜백을 중첩해서 사용할 때 발생하는 가독성 문제를 말합니다.
 
 ```js
-코드 복사
 getUserData((user) => {
   getPosts(user.id, (posts) => {
     getComments(posts[0].id, (comments) => {
