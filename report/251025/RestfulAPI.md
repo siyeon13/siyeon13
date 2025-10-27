@@ -36,6 +36,35 @@ API 설계에는 몇 가지 중요한 원칙이 있다. 이 원칙들을 지키�
 
 { "error": { "code": "INVALID_INPUT", "message": "The provided email is not valid", "details": { "field": "email" } } }
 
+
+### 🎯 리소스 중심 설계
+모든 것을 리소스로 생각하고, URL로 표현. 이는 특히 RESTful API 설계에서 중요.
+
+- /users: 사용자 리소스
+- /posts: 게시글 리소스
+- /comments: 댓글 리소스
+
+***리소스 중심 설계의 이점:***
+
+- 직관적인 URL 구조
+- CRUD 작업과 HTTP 메서드의 자연스러운 매핑
+- 확장성과 유지보수성 향상
+
+### 🔐 보안 고려사항
+API 설계 시 보안은 필수적으로 고려해야 할 요소입니다.
+
+1. 인증(Authentication)과 인가(Authorization)
+- OAuth 2.0, JWT 등의 표준 프로토콜 사용
+- HTTPS를 통한 암호화 통신
+2. 입력 유효성 검사
+- 모든 클라이언트 입력에 대해 서버 측 유효성 검사 수행
+3. 속도 제한(Rate Limiting)
+- DoS 공격 방지 및 공정한 사용 보장
+- HTTP/1.1 429 Too Many Requests Retry-After: 3600
+4. CORS (Cross-Origin Resource Sharing) 설정
+- 필요한 도메인에 대해서만 API 접근 허용
+
+
 ---
 
 ## 2️⃣ REST란?
